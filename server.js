@@ -11,6 +11,10 @@ app.get('/', function(request, response){
 	console.log('Sent a file');
 });
 
+app.get('/css/main.css', function(request, response){
+	response.send('You\'ll never see this');
+})
+
 app.get('/Boulder', function(request, response){
 
 	response.sendFile('./public/html/boulder.html', {root: './'});
